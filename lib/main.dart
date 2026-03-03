@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
           double acceleration =
           sqrt(event.x * event.x + event.y * event.y + event.z * event.z);
 
-          // 🎲 Shake per dado
+          // Shake 
           if (acceleration > shakeThreshold && !shakeCooldown) {
             shakeCooldown = true;
             _rollDice();
@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
             });
           }
 
-          // 🌙 Capovolgi telefono
+          //  Capovolgi telefono
           if (event.z < -9) {
             setState(() {
               isDarkMode = true;
@@ -147,4 +147,5 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
 }
